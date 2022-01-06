@@ -1,0 +1,19 @@
+extends layout/email-template
+block vars
+	- title = "Tiêu đề Email"
+	- heading = 'Yêu cầu hướng dẫn về dịch vụ Email'
+
+block email-main
+	.e-body.rounded.bg-white
+		h1.tt-header=title
+		hr
+		.tt Hướng dẫn cài đặt và sử dụng Email
+		p Tôi cần hướng dẫn cài đặt và cách sử dụng chi tiết về dịch vụ xyz của bạn. Tôi cần có những yêu cầu gì để đáp ứng cho việc này.
+		ul
+			li Yêu cầu phần mềm, phần cứng?
+			li Internet network or local network?
+			li Thời gian cài đặt bao lâu?
+			li Có những vấn đề thường gặp phải
+		hr
+		.small.text-muted.note * Đây là email trả lời tự động, vui lòng không trả lời thư này.
+		

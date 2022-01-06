@@ -1,0 +1,170 @@
+@mixin a-hover-underline($color) {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    &:after {
+        content: '';
+        height: 1px;
+        @include absolute(null,0,0);
+        background: $color;
+        width: 0;
+        transition: width 0.4s ease;
+    }
+    &:hover {
+        color: $color;
+        &:after {
+            width: 100%;
+            left: 0;
+        }
+    }
+}
+.p-icon,
+.picon {
+    margin-bottom: 10px;
+    line-height: 1.4;
+    position: relative;
+    padding-left: 26px;
+    #{$fa-all} {
+        position: absolute;
+        left: 0;
+        top: 3px;
+        opacity: .7;
+    }
+    a {
+        color: inherit;
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+.list-style-angle {
+    &, li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        position: relative;
+        padding-left: 18px;
+        &:before {
+            content: '\f105';
+            font-family: 'font awesome 5 pro';
+            @include absolute(5px,null,null,2px);
+            line-height: 1;
+            opacity: .5;
+        }
+    }
+    a {
+        @include a-hover-underline(#fff);
+        margin-bottom: 6px;
+        color: inherit;        
+        #{$fa-all} {
+            margin: 2px 8px 0 2px;
+            opacity: .8;
+        }
+    }
+}
+// Footer
+.footer {
+    $footer-background: #4b4d82; // #34486f;
+    $footer-color: #ddd;
+    $tt-color: #fff;
+    --footer-font-size: 15px;
+
+    .st1 {
+        fill: $footer-background;
+    }
+
+    background-color: $footer-background;
+    color: $footer-color;
+    font-size: var(--footer-font-size);
+    position: relative;
+    z-index: 1;
+
+    &-bg {
+        @extend %bg-image;
+        @extend %absolute-all;
+        z-index: -1;
+        pointer-events: none;
+        opacity: .2;
+    }
+    &-tt {
+        color: $tt-color;
+        margin-bottom: 24px;
+        &:after {
+            content: '';
+            display: block;
+            width: 26px;
+            height: 3px;
+            background: yellow;
+            margin: 5px 0 12px;
+        }
+    }
+    &-news {
+        .thumb-res {
+            width: 90px;
+            flex: 0 0 auto;
+            height: 60px;
+            margin: 0 16px 0 0;
+        }
+        .block {
+            align-items: center;
+            + .block {
+                margin-top: 13px;
+            }
+        }
+        .info {
+            @include ellips(2);
+        }
+    }
+    &-gallery {
+        grid-template-columns: auto auto auto;
+        grid-gap: 14px;
+        margin-bottom: 0;
+        .thumb-res {
+            padding-bottom: 70%;
+        }
+    }
+    &-col {
+        margin-top: 40px;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .copy, .copyr {
+        padding: 12px 0;
+        position: relative;
+        color: rgba(#fff,.5);
+    }
+}
+@include media-breakpoint-up(md) {
+    .footer {
+        &-col {
+            margin-bottom: 30px;
+        }
+        &-gallery {
+            grid-template-columns: auto auto;
+        }
+        .copy, .copyr {
+            .col-left,
+            .col-right {
+                max-width: 70%;
+            }
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .footer {
+        &-gallery {
+            grid-template-columns: auto auto auto;
+        }
+    }
+}
+@include media-breakpoint-up(xl) {
+    .footer {
+        &-col {
+            margin-top: 48px;
+        }
+    }
+}

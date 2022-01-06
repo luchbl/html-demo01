@@ -1,0 +1,18 @@
+.price {
+    font-weight: 600;
+    color: $danger;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &-sale {
+        margin-right: .25rem;
+    }
+    &-origin {
+        color: #929299;
+        font-weight: 400;
+        font-size: 84%;
+    }
+    u, del {
+        margin-left: 2px;
+    }
+}

@@ -1,0 +1,62 @@
+.heading-ux {
+    position: relative;
+    align-items: center;
+
+    &:before {
+        content: '';
+        @extend %absolute-all;
+        margin: auto;
+        height: 1px;
+        background: #eee;
+        z-index: -1;
+    }
+    > * {
+        background: #fff;
+    }
+    a {
+        margin-left: auto;
+        padding-left: .75rem;
+    }
+    #{$tt-all} {
+        margin: 0;
+        padding: .25rem 1.05rem;
+        position: relative;
+        z-index: 1;
+        color: $primary;
+        overflow: hidden;
+        &:after {
+            content: '';
+            @include absolute(0,null,0,0);
+            border-left: 3px solid $secondary;
+        }
+    }
+    .content-detail & {
+        &:before {
+            top: auto;
+        }
+        #{$tt-all} {
+            margin-bottom: -1px;
+            padding: 1.25rem 1rem .5rem;
+            background: linear-gradient(to bottom, #f8f8f8, #fff);
+            &:after {
+                content: '';
+                @include absolute(null,0,100%,0);
+                height: 3px;
+                background: $primary;
+                border: none;
+            }
+        }
+    }
+}
+.text-link-more {
+	white-space: nowrap;
+	#{$fa-all} {
+		margin-left: 5px;
+		transition: all 0.3s ease;
+	}
+	&:hover {
+		#{$fa-all} {
+			margin-left: 8px;
+		}
+	}
+}

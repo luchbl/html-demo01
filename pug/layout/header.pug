@@ -1,0 +1,90 @@
+block headder
+    header.header
+        .container-fluid.d-flex
+            a.logo(href="index.html" title="" alt=""): img(src="css/skin/logo.png" alt="")
+            .header-right.d-flex
+                .form-search#form-search
+                    .form-group.m-0
+                        .block
+                            input(type="text" class="form-control" placeholder="Nhập từ khóa tìm kiếm")
+                            button(type="submit" class="addon icon-submit far fa-search")
+                        .dropdown-sug
+                            .item
+                                .thumb: img(src="css/skin/products/1.jpg" alt="")
+                                .info
+                                    .tt De Ville Prestige Automatic Men's Watch 424.13.40.21.03.002
+                            .item
+                                .thumb: img(src="css/skin/products/1.jpg" alt="")
+                                .info
+                                    .tt De Ville Automatic Silver Dial Men's Watch 424.13.40.20.02.006
+                .header-right-item.search-item
+                    button#search-toggle.icon.toggle-form-search.far.fa-search
+                .header-right-item.hotline
+                    +phone_a('icon-group d-flex align-items-center')
+                        span.icon.fa.fa-phone.fa-flip-horizontal
+                        span.text.lh-1.ml-2
+                            span.fw-medium.block.fs-12 Hotline
+                            span.b.fw-bold
+                                +phone_text()
+                .header-right-item.hotline
+                    +mail_a('icon-group d-flex align-items-center')
+                        span.icon.fa.fa-envelope
+                        span.text.lh-1.ml-2
+                            span.fw-medium.block.fs-12 Hotline
+                            span.b.fw-bold
+                                +mail_text()
+                //- .header-right-item.dd-hover.dropdown-user
+                //-     .dd-toggle.icon-group.d-flex.align-items-center
+                //-         span.icon.icon-user.bi.bi-person-circle
+                //-         span.text.ml-2.lh-1
+                //-             span.fw-medium.block.fs-12 Đăng nhập
+                //-             span.b.fw-bold Thành Viên
+                //-     .dd-menu
+                //-         a.dd-item(href="#" title="" alt="")
+                //-             span.bi.bi-box-arrow-in-right
+                //-             | Đăng nhập
+                //-         a.dd-item(href="#" title="" alt="")
+                //-             span.bi.bi-unlock
+                //-             | Đăng ký
+                //-         .divider
+                //-         a.dd-item(href="#" title="" alt="")
+                //-             span.bi.bi-gear
+                //-             | Cài đặt tài khoản
+                .header-right-item.dd-hover.dropdown-cart
+                    a.dd-toggle.icon.icon-cart(href="cart.html")
+                        span.far.fa-shopping-cart
+                        span.badge 2
+                    .dd-menu
+                        .text-note 2 sản phẩm trong giỏ hàng
+                        .drop-item
+                            .d-flex
+                                .thumb-res
+                                    a(href="product-detail.html" title="" alt="")
+                                        img(src="css/skin/products/1.jpg" alt="")
+                                .info
+                                    a.tt.fw-medium(href="product-detail.html" title="" alt="")
+                                        | Pellentesque quis enim vitae purus finibus dapibus.
+                                    .price.lh-base
+                                        span.price-sale 2,500,000<u>đ</u>
+                                        del.price-origin 3,300,000<u>đ</u>
+                                    a.text-danger.trash(role="button"): i.bi.bi-trash
+                        .drop-item
+                            .d-flex
+                                .thumb-res
+                                    a(href="product-detail.html" title="" alt="")
+                                        img(src="css/skin/products/1.jpg" alt="")
+                                .info
+                                    a.tt.fw-medium(href="product-detail.html" title="" alt="")
+                                        | Vivamus vel arcu sit amet sapien consequat pharetra.
+                                    .price.lh-base
+                                        span.price-sale 2,500,000<u>đ</u>
+                                        del.price-origin 3,300,000<u>đ</u>
+                                    a.text-danger.trash(role="button"): i.bi.bi-trash
+                        .drop-item
+                            .d-grid
+                                a.btn.btn-success.mt-2(href="cart.html") Thanh toán giỏ hàng
+            button#menu-toggle.btn-menu.btn-menu-slide.fa.fa-bars(role="button")
+                b Menu
+
+        block menu
+            include menu 

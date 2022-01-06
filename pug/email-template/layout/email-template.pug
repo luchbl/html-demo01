@@ -1,0 +1,25 @@
+- sitename = "Fun Face"
+- website = 'www.fun-face.com'
+
+block vars
+	- title = ''
+	- social = false
+
+doctype transitional
+html
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		title=title
+		style
+			include ../email.css
+	body
+		.e-wrapper
+			.e-header.bsz
+				.logo.logo-outside.bsz: img(src="../css/skin/logo.png" alt="")
+			.e-main.rounded.bg-white
+				block email-main
+				
+			block email-footer
+				include email-footer

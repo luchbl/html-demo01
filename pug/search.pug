@@ -1,0 +1,70 @@
+extends template/template
+block vars
+    - title= 'Kết quả tìm kiếm'
+    - wrapperClass = ''
+    - homeSlider = false
+    - bannerAll = false
+    - bannerImageName = ''
+    - login = false
+
+append breadcrumb 
+    +breadcrumb({})
+block mainer
+    main.mainer
+        .container.py-5.py-xl-6
+            .heading-result
+                small Tìm kiếm từ khoá
+                .tt-md.tt-key sản phẩm abcd
+                .text-desc Gần 1.283 kết quả tìm thấy
+            .search-row
+                .products-result.mb-5.row.row-cols-2.row-cols-md-4.row-cols-lg-5.g-3.g-xxl-4.mb-4.list-products
+                    //- .col.mb-3
+                    //-     +pro-item('1.jpg', 'Tượng tặng con')
+                    //- .col.mb-3
+                    //-     +pro-item('2.jpg', 'Tượng vợ chồng')
+                    //- .col.mb-3
+                    //-     +pro-item('3.jpg', 'Tặng bạn bè')
+                    //- .col.mb-3
+                    //-     +pro-item('4.jpg', 'Tượng gia đình')
+                    //- .col.mb-3
+                    //-     +pro-item('5.jpg', 'Tượng bạn bè')
+                    //- .col.mb-3
+                    //-     +pro-item('6.jpg', 'Tượng cá nhân')
+                    //- .col.mb-3
+                    //-     +pro-item('1.jpg', 'Tượng trẻ em')
+                    //- .col.mb-3
+                    //-     +pro-item('2.jpg', 'Tượng vợ chồng')
+
+                .tt.tt-headline.text-uppercase Bài viết
+                .post-result
+                    .item
+                        .thumb-res
+                            +img('theme/thumb@1x1.jpg')
+                        .info
+                            .text-label Blog
+                            .tt
+                                a(href='#') Tai Nghe Không Dây Chính Hãng - Giảm 63% Sale Tết Công Nghệ
+                            .desc
+                                | Duy Nhất 19/1-10/2. Bảo hành 12 tháng. 1 đổi 1 15 ngày. Tai Nghe Bluetooth Soundpeats. Chất Âm Đỉnh Cao. Thời lượng pin trâu. Freeship Toàn Quốc. Mua Ngay! Sale Tết Đến 75%.
+                    .item
+                        .thumb-res
+                            +img('theme/thumb@1x1.jpg')
+                        .info
+                            .text-label Blog
+                            .tt
+                                a(href='#') Tai Nghe Bluetooth Chính Hãng - Công ty Bluetooth Việt Nam
+                            .desc Tai Nghe Bluetooth Chính Hãng - Giao Hàng Miễn Phí Trên Toàn Quốc, Hậu Mãi Tốt!
+                    .item
+                        .info
+                            .text-label Blog
+                            .tt
+                                a(href='#') Mua tai nghe giá rẻ, chính hãng, giao nhanh 1 giờ
+                            .desc
+                                | Tai nghe Bluetooth True Wireless Samsung Buds Pro. Chống ồn ... Tai nghe chụp tai Bluetooth AirPods Max Apple MGYH3/ MGYJ3/ MGYL3.
+                    .item
+                        .info
+                            .text-label Blog
+                            .tt
+                                a(href='#') Trung Tâm Sửa Chữa & Bảo Hành Tai Nghe Bluetooth
+                            .desc
+                                | Mua tai nghe bluetooth không dây, có dây chính hãng, tai nghe điện thoại có mic. Giá rẻ. Nhiều khuyến mãi hấp dẫn. Trả góp 0%. Bảo hành uy tín.

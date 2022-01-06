@@ -1,0 +1,53 @@
+extends template/template
+block vars
+	- title = 'Modal'
+	- menu_active = ''
+	- wrapper_class = ''
+	- wrapper_id = ''
+	- home_slider = false
+	- banner_top = false
+	- banner_image = ''
+	- login = false
+
+block mainer
+	main.mainer
+		.container.py-6 
+			h2.display-5.mb-4.text-center Modal Form gửi Liên hệ
+			.text-center
+				button.btn.btn-sm.px-5.btn-primary(type="button" data-bs-toggle="modal" data-bs-target="#modal-formContact") Modal Form
+			//- login
+			.modal.modal-form.fade#modal-formContact(tabindex="-1" aria-hidden="true" data-bs-backdrop="static")
+				.modal-dialog.modal-dialog-centered
+					.modal-content
+						button.btn-close(type="button" data-bs-dismiss="modal" aria-label="Close")
+						.form-login
+							.tt-sm.text-center.text-primary.text-uppercase.mb-4 Gửi yêu cầu Liên Hệ
+							.form
+								.block.form-group.mb-3 
+									input.form-control(type="text" placeholder="Số điện thoại/Email" required)
+									span.form-control-icon: i.far.fa-mobile-alt
+								.block.form-group.mb-3 
+									input.form-control(type="password" placeholder="Mật khẩu" required)
+									span.form-control-icon: i.far.fa-lock
+									a.password-toggle.active(role="button"): i.far.fa-eye
+								.d-grid.mb-4
+									button.btn.btn-primary.text-white.btn-md(type="button") Đăng nhập
+								.text-center.text-desc.mb-3 Hoặc đăng nhập bằng
+								.row.g-2
+									.col.d-grid 
+										+a('#', 'btn btn-youtube',)
+											i.fab.fa-google.mr-2
+											| Google 
+									.col.d-grid 
+										+a('#', 'btn btn-facebook',)
+											i.fab.fa-facebook-f.mr-2
+											| Facebook 
+								.d-flex.justify-content-between.text-center.mt-45 
+									+a('#modal-recover', 'hover-link', 'Quên mật khẩu?')(data-bs-toggle="modal" data-bs-dismiss="modal")
+									+a('#modal-register', 'hover-link',)(data-bs-toggle="modal" data-bs-dismiss="modal")
+										| Tạo tài khoản mới
+										i.far.fa-chevron-right.ml-2
+
+
+			script(src="https://www.google.com/recaptcha/api.js")
+			+parsley()
