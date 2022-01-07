@@ -1,13 +1,13 @@
 .form-search {
 	@include absolute(0,0,0,0);
-	padding: 5px 15px;
-	background: #fff;
+	padding: 8px 15px;
+	background: #fafafa;
 	z-index: 981;
 	display: flex;
 	visibility: hidden;
 	opacity: 0;
 	transition: transform 0.3s ease, opacity 0.35s ease;
-	transform: translateY(-100%);
+	transform: scale(.9);
     align-items: center;
     
 	.form-control {
@@ -16,9 +16,9 @@
 		font-size: 16px;
 		padding: 0 40px 0 10px;
 		height: 40px;
+		background: transparent;
 		&:focus {
 			box-shadow: none;
-			background-color: #fff;
 			border-color: $primary;
 		}
 	}
@@ -60,6 +60,11 @@
 		visibility: visible;
 		transform: none;
 		opacity: 1;
+		.dropdown-sug {
+			height: 65vh;
+			overflow-y: auto;
+			transition: height .75s ease 0.1s;
+		}
 	}
 
 	#searchwait {
@@ -73,44 +78,48 @@
 	@include absolute(100%,0,null,0);
 	background: #fff;
 	z-index: 777;
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 10px 10px;
 	overflow: hidden;
-	min-height: 50vh;
+	height: 0;
 
 	.item {
 		display: inline-block;
 		width: 100%;
 		margin: 0 !important;
-		padding: 6px;
+		padding: .75rem 1.5rem;
 		position: relative;
 		color: $color-body;
-		+ .item {
-			border-top: 1px solid #ddd;
-		}
+		border-top: 1px solid #f0f0f0;
 	}
 	.thumb {
 		width: 45px;
 		height: 45px;
 		float: left;
+		margin: 3px 12px 0 0;
+	}
+	.tt {
+		margin: 0;
+		font-weight: 500;
+		@include ellips(2);
 	}
 	img {
 		border-radius: 4px;
 	}
-	.info {
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		padding: 10px 10px;
+	.text-not {
+		padding: .75rem 1.5rem;
+		font-style: italic;
+		color: #999;
+		border-top: 1px solid #eee;
 	}
 	.item:hover {
-		background: #f2f2f2;
+		background: #f9f9f9;
 		.info {
 			color: $primary;
 		}
 	}
 }
 @mixin form-search-static($width: 300px, $bg:#f8f8f8, $border:1px solid rgba(#000,.1), $radius: 4px) {
-	position: static;
+	position: relative;
 	padding: 0;
 	margin: 0;
 	visibility: visible;
@@ -127,9 +136,9 @@
         background: $bg;
         border-radius: $radius;
         width: $width;
+        height: 44px;
         &:focus {
-        	border-color: rgba($primary, .6);
-        	box-shadow: 0 0 0 4px rgba($primary, .25);
+        	border-color: $secondary;
         	background: #fff;
         }
 	}

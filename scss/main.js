@@ -29,7 +29,13 @@ $('#search-toggle').click(function() {
 });
 $('#close-search').click(function() {
     $('#menu-backdrop').trigger('click');
-})
+});
+$('#form-search .form-control').on('focusin', function() {
+    $('#form-search').addClass('focus');
+});
+$('#form-search .form-control').on('focusout', function() {
+    $('#form-search').removeClass('focus');
+});
 
 // line - d-width
 $('.d-width').each(function () {

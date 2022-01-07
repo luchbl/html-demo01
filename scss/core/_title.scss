@@ -6,9 +6,9 @@
     --plyr-color-main: #{$primary};
 }
 #{$tt-all} {
-    font-weight: 700;
+    font-weight: 600;
     margin: 0 0 10px;
-    color: darken($body-color, 5%);
+    color: darken($body-color, 10%);
     letter-spacing: -.25px;
     a {
         color: inherit;

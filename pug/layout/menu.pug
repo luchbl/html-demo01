@@ -16,10 +16,6 @@ block menu
                         span.icon.fa.fa-mobile-alt
                         +phone_text()
                         |  - Ms A
-                    +phone_a('mobile')
-                        span.icon.fa.fa-mobile-alt
-                        +phone_text()
-                        |  - Mr B
                     +mail_a()
                         span.icon.fa.fa-envelope
                         +mail_text()
@@ -54,13 +50,7 @@ block menu
                                     li: a(href="events.html" title="" alt="" target="_self") Vtaelecs efficitur
                                     li: a(href="events.html" title="" alt="" target="_self") Cras laoreet odceler
                                     li: a(href="events.html" title="" alt="" target="_self") Curabitur ullamrper
-                            li
-                                a(href="events.html" title="" alt="" target="_self") Sitamet sagits pellen
-                                ul
-                                    li: a(href="events.html" title="" alt="" target="_self") Nisi vel valiquam
-                                    li: a(href="events.html" title="" alt="" target="_self") Suspendi quis velit
-                                    li: a(href="events.html" title="" alt="" target="_self") Tortor pellsque saged
-                                    li: a(href="events.html" title="" alt="" target="_self") Suspen luctus nequed
+                            li: a(href="events.html" title="" alt="" target="_self") Sitamet sagits pellen
                             li: a(href="events.html" title="" alt="" target="_self") Mauris viverra quam
                             li: a(href="events.html" title="" alt="" target="_self") Donec rutrum commodo
                             li: a(href="events.html" title="" alt="" target="_self") Maecenas sceleue purus
@@ -77,3 +67,5 @@ block menu
                         a(href="contact.html" title="" alt="" target="_self")
                             i.far.fa-id-card-alt
                             | Liên hệ
+            .menu-footer 
+                +list_social()

@@ -9,16 +9,29 @@ block headder
                             input(type="text" class="form-control" placeholder="Nhập từ khóa tìm kiếm")
                             button(type="submit" class="addon icon-submit far fa-search")
                         .dropdown-sug
+                            .text-not Kết quả tìm kiếm sản phẩm 
+                            .item 
+                                +a('product-detail.html', 'absolute')
+                                .tt Bộ đồ bảo hộ chống Covid-19 WHO
                             .item
+                                +a('product-detail.html', 'absolute')
                                 .thumb: img(src="css/skin/products/1.jpg" alt="")
                                 .info
                                     .tt De Ville Prestige Automatic Men's Watch 424.13.40.21.03.002
+                                    .price
+                                        span.price-sale 120.000đ
+                                        del.price-origin 170.000đ
                             .item
+                                +a('product-detail.html', 'absolute')
                                 .thumb: img(src="css/skin/products/1.jpg" alt="")
                                 .info
                                     .tt De Ville Automatic Silver Dial Men's Watch 424.13.40.20.02.006
-                .header-right-item.search-item
-                    button#search-toggle.icon.toggle-form-search.far.fa-search
+                                    .price
+                                        span.price-sale 120.000đ
+                            .item.last
+                                +a('products.html', 'block text-danger')
+                                    | Xem tất cả
+                                    span.ml-1.far.fa-chevron-right
                 .header-right-item.hotline
                     +phone_a('icon-group d-flex align-items-center')
                         span.icon.fa.fa-phone.fa-flip-horizontal
@@ -33,6 +46,8 @@ block headder
                             span.fw-medium.block.fs-12 Hotline
                             span.b.fw-bold
                                 +mail_text()
+                .header-right-item.search-item
+                    button#search-toggle.icon.toggle-form-search.far.fa-search
                 //- .header-right-item.dd-hover.dropdown-user
                 //-     .dd-toggle.icon-group.d-flex.align-items-center
                 //-         span.icon.icon-user.bi.bi-person-circle

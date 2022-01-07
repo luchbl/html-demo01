@@ -80,6 +80,13 @@ html.menu-open {
         -webkit-overflow-scrolling: touch;
         padding: .5rem 0;
 	}
+	&-footer {
+		padding: 1rem var(--nav-padding-x);
+		background: #eee;
+		.list-icon-social {
+			margin-top: -.5rem;
+		}
+	}
 	&-slide {
 		margin: 0;
 		padding: 0;
@@ -183,13 +190,9 @@ html.menu-open {
 		}
 	}
 	.menu {
-		//--nav-font-size: 15px;
-		--menu-max-width: #{map-get($container-max-widths, "xl")};
-		
 		display: block;
 		font-size: 15px;
 		padding: 0 1rem;
-
 
         &-body {
         	position: static;
@@ -214,6 +217,7 @@ html.menu-open {
         	> li:hover > a,
         	> li.active > a {
         		color: #fff;
+        		background: rgba(#000,.05);
         	}
         	> li:first-child {
         		display: none;
@@ -244,7 +248,7 @@ html.menu-open {
                 box-shadow: 0 10px 25px -5px rgba(#000,.25);
 
                 a {
-                	padding: 7px 20px;
+                	padding: 10px 20px !important;
                 }
                 li {
                 	border: none !important;
@@ -273,19 +277,30 @@ html.menu-open {
         }
 	}
 }
+@include media-breakpoint-up(lg) {
+	.menu {
+		--a-padding-x: 1.25rem;
+		&-slide {
+			> li:first-child {
+				display: block;
+			}
+		}
+	}
+}
 @include media-breakpoint-up(xl) {
 	.menu {
-		--nav-font-size: 16px;
-		--padding-a-x: 20px;
+		--a-padding-x: 1.5rem;
 
-		//--ul-width: 250px;
+		font-size: 1rem;
+		max-width: map-get($container-max-widths, "xl");
+		margin: auto;
 	}
 }
 @include media-breakpoint-up(xxl) {
 	.menu {
-		--menu-max-width: #{map-get($container-max-widths, "xxl")};
+		max-width: #{map-get($container-max-widths, "xxl")};
 	}
 }
 
 // Menu mega
-@import "menu-mega";
+// @import "menu-mega";

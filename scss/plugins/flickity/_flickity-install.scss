@@ -31,8 +31,8 @@
 	height: 100%;
 }
 .flickity-prev-next-button {
-	width: var(--button-size, 40px);
-	height: var(--button-size, 40px);
+	width: var(--button-size, 38px);
+	height: var(--button-size, 38px);
 	border-radius: 50%;
 	background-color: #fff;
 	position: absolute;
@@ -220,7 +220,7 @@
 }
 @include media-breakpoint-up(md) {
 	.home-slider {
-		--slide-height: calc(720 / 1920 * 100%);
+		--slide-height: calc(700 / 1920 * 100%);
 		//--tt-lg: calc(24px + 1.25vw);
 		--desc-font-size: 1.075rem;
 		--line-space: 1.125rem;
@@ -255,7 +255,7 @@
 .carousel-c2md3,
 .carousel-c2md5 {
     --cell-count: 2;
-    --cell-mr: 3%;
+    --cell-mr: 4%;
     --margin-all: calc(calc(var(--cell-count) - 1) * var(--cell-mr));
 
     .carousel-cell {
@@ -269,15 +269,25 @@
 @include media-breakpoint-up(md) {
 	.carousel-c2md3 {
 		--cell-count: 3;
-		--cell-mr: 2%;
+		--cell-mr: 4%;
 	}
 	.carousel-c2md4 {
 		--cell-count: 4;
-		--cell-mr: 2%;
+		--cell-mr: 3%;
 	}
 	.carousel-c2md5 {
 		--cell-count: 5;
-		--cell-mr: 2%;
+		--cell-mr: 3%;
+	}
+}
+@include media-breakpoint-up(xl) {
+	.carousel-c2md4 {
+		--cell-count: 4;
+		--cell-mr: 2.5%;
+	}
+	.carousel-c2md5 {
+		--cell-count: 5;
+		--cell-mr: 4%;
 	}
 }
 

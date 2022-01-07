@@ -170,16 +170,25 @@
 		.form-search {
 			padding-left: 15vw;
 			padding-right: 15vw;
+
+			.dropdown-sug {
+				left: 15vw;
+				right: 15vw;
+			}
+		}
+		&.stick {
+			position: relative;
 		}
 	}
 	.logo {
-		--logo-width: 110px;
-		--logo-margin: 10px 0;
+		--logo-width: 120px;
+		margin: 1rem 0;
 	}
 	.header-right {
 		--margin-item: 24px;
 		.icon {
 			--icon-size: 38px;
+			font-size: 18px;
 			background: rgba(#000, .05);
 		}
 		.text {
@@ -196,14 +205,6 @@
 	.logo {
 		--logo-width: 120px;
 	}
-	.header {
-		&-anchor {
-			display: none;
-		}
-		&.stick {
-			position: relative;
-		}
-	}
 	.header-right {
 		--margin-item: 32px;
 		.dropdown-user {
@@ -212,6 +213,9 @@
 	}
 }
 @include media-breakpoint-up(xl) {
+	.logo {
+		--logo-width: 160px;
+	}
 	.header {
 		--header-container: #{map-get($container-max-widths, "xl")};
 		.container-fluid {
@@ -221,7 +225,28 @@
 	}
 	.header-right {
 		.form-search {
-			@include form-search-static(320px, #fff, 1px solid #c7c7db, 6px);
+			@include form-search-static(340px, #f9f9fb, 2px solid $primary, 5px);
+		    .dropdown-sug {
+		    	left: 0;
+		    	right: 0;
+		    	width: 100%;
+		    	height: auto;
+		    	opacity: 0;
+		    	visibility: hidden;
+		    	border: 2px solid $secondary;
+		    	border-top: 0;
+		    }
+		    &.focus {
+		    	.form-control {
+		    		border-radius: $border-radius $border-radius 0 0;
+		    	    border-bottom: 0;
+		    	}
+		    	.dropdown-sug {
+		    		opacity: 1;
+		    		visibility: visible;
+		    		transition: opacity .5s ease;
+		    	}
+		    }
 		}
 		&-item.search-item {
 			display: none !important;

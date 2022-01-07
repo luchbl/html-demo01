@@ -7,12 +7,20 @@
         autoPlay: 4000,
         pauseAutoPlayOnHover: false,
         wrapAround: true,
+        selectedAttraction: 0.02,
+        friction: 0.3
     });
     $('.carousel-single, .carousel-c2md3, .carousel-c2md4, .carousel-c2md5').flickity({
         contain: true,
         cellAlign: 'left',
         groupCells: '100%',
         pageDots: true,
+    });
+    $('.carousel-cate').flickity({
+        contain: true,
+        // cellAlign: 'left',
+        groupCells: '100%',
+        pageDots: false,
     });
     // products detail
     if ($('.carousel-nav').length || $('.carousel-main').length) {

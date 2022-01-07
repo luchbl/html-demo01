@@ -4,6 +4,8 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    line-height: 1.4;
+    //font-family: 'Roboto Condensed', $font-family;
     &-sale {
         margin-right: .25rem;
     }
@@ -14,5 +16,47 @@
     }
     u, del {
         margin-left: 2px;
+    }
+}
+.list-products {
+    .flickity-page-dots {
+        display: none;
+    }
+    .tt {
+        font-weight: 500;
+        @include ellips(2);
+        line-height: 1.4;
+        height: floor(16px * 1.4) * 2;
+    }
+    .btn-addtocart {
+        display: inline-flex;
+        align-items: center;
+        text-transform: uppercase;
+        background: rgba($primary,.1);
+        color: darken($primary, 10%);
+        border-radius: $border-radius;
+        font-size: 13px;
+        font-weight: 500;
+        padding: .375rem .75rem;
+        margin: .375rem 0 0;
+        .icon {
+            margin-right: .5rem;
+        }
+    }
+    .block:hover {
+        .tt {
+            color: $primary;
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .list-products {
+        .tt {
+            font-size: 17px;
+            height: floor(17px * 1.4) * 2;
+        }
+        .price {
+            font-size: 18px;
+        }
     }
 }

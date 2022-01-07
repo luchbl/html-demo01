@@ -1,7 +1,7 @@
 extends template/template
 block vars
-    - title = 'Giới thiệu'
-    - menu_active = 'about'
+    - title = 'Trang chủ'
+    - menu_active = 'index'
     - wrapper_class = 'home-page'
     - wrapper_id = 'home-page'
     - home_slider = true
@@ -11,29 +11,50 @@ block vars
 
 block mainer
     main.mainer
-        .block-bg.about-section.py-5.py-xl-6
-            .container
-                .row
-                    .col-md-5.order-md-2.wow.fadeInRight
-                        figure.mb-0: img(src="css/skin/theme/thumb@4x3.jpg" alt="")
-                    .col-md-7.order-md-1.mt-4.mt-md-3.pr-xl-5.wow.fadeInLeft
-                        h1.tt-md.text-uppercase Giới thiệu
-                        .d-width.mb-4.border-bottom.border-4.border-danger(width='30')
-                        .text-about-ellips
-                            .text-ellips.content-ellips
-                                p Trò chơi dân gian không đơn thuần là những trò vui tiêu khiển mà nó chứa đựng những nét đẹp văn hóa và mang đậm giá trị truyền thống dân tộc và là một thành tố quan trọng trong kho tàng văn hóa dân gian Việt Nam. Trong tất cả các lễ hội, đặc biệt là lễ hội vui xuân thì không thể thiếu các trò chơi dân gian. Cũng thông qua các trò chơi này mà mọi người hòa nhập và gần gũi với nhau.
-                                p Với người Việt, thả diều hàm chứa ý nghĩa tâm linh, khát vọng về tự do, no ấm và cầu mong may mắn trong làm ăn cũng như cuộc sống. Nhiều nghiên cứu chỉ ra rằng, tục thả diều... ở một số lễ hội ở Việt Nam cũng là nghi lễ cầu mùa của cư dân nông nghiệp xưa.
-                            .mt-3
-                                +a('about.html', 'text-danger ')
-                                    | Xem thêm
-                                    i.far.fa-chevron-right.ml-2
-        .py-6 
-            .container 
-                .row.row-cols-2.row-cols-md-4 
-                    .col: +pro-item('1.jpg', 'Tiêu đề sản phẩm')
-                    .col: +pro-item('2.jpg', 'Tiêu đề sản phẩm')
-                    .col: +pro-item('3.jpg', 'Tiêu đề sản phẩm')
-                    .col: +pro-item('4.jpg', 'Tiêu đề sản phẩm')
+        .py-5.products-section
+            .container.mb-5
+                .heading-ux.d-flex.mb-3
+                    h1.tt-sm.text-uppercase Sản phẩm mới nhất
+                    +a('products.html', 'text-link-more text-decoration-none')
+                        | Xem thêm
+                        i.far.fa-chevron-right
+                .carousel-c2md4.list-products
+                    .carousel-cell: +pro-item('1.jpg', 'Tiêu đề sản phẩm')
+                    .carousel-cell: +pro-item('2.jpg', 'Tiêu đề sản phẩm dài thành 2 dòng')
+                    .carousel-cell: +pro-item('3.jpg', 'Tiêu đề sản phẩm dài vừa phải')
+                    .carousel-cell: +pro-item('4.jpg', 'Tiêu đề sản phẩm cực kỳ dài dòng')
+                    .carousel-cell: +pro-item('5.jpg', 'Tiêu đề sản phẩm dài rất dài khoảng ba bốn dòng')
+            .container.mb-5
+                .heading-ux.d-flex.mb-3
+                    h1.tt-sm.text-uppercase Sản phẩm bán chạy
+                    +a('products.html', 'text-link-more text-decoration-none')
+                        | Xem thêm
+                        i.far.fa-chevron-right
+                .carousel-c2md4.list-products
+                    .carousel-cell: +pro-item('1.jpg', 'Tiêu đề sản phẩm')
+                    .carousel-cell: +pro-item('2.jpg', 'Tiêu đề sản phẩm dài thành 2 dòng')
+                    .carousel-cell: +pro-item('3.jpg', 'Tiêu đề sản phẩm dài vừa phải')
+                    .carousel-cell: +pro-item('4.jpg', 'Tiêu đề sản phẩm cực kỳ dài dòng')
+                    .carousel-cell: +pro-item('5.jpg', 'Tiêu đề sản phẩm dài rất dài khoảng ba bốn dòng')
+            .container.mb-5.banner-qc 
+                .row.row-cols-1.row-cols-sm-2.gy-3.gx-4
+                    .cols
+                        a.block(href="#"): +img('theme/banner-a.jpg')
+                    .cols
+                        a.block(href="#"): +img('theme/banner-b.jpg')
+            .container.mb-5
+                .heading-ux.d-flex.mb-3
+                    h1.tt-sm.text-uppercase Sản phẩm hot nhất
+                    +a('products.html', 'text-link-more text-decoration-none')
+                        | Xem thêm
+                        i.far.fa-chevron-right
+                .carousel-c2md4.list-products
+                    .carousel-cell: +pro-item('1.jpg', 'Tiêu đề sản phẩm')
+                    .carousel-cell: +pro-item('2.jpg', 'Tiêu đề sản phẩm dài thành 2 dòng')
+                    .carousel-cell: +pro-item('3.jpg', 'Tiêu đề sản phẩm dài vừa phải')
+                    .carousel-cell: +pro-item('4.jpg', 'Tiêu đề sản phẩm cực kỳ dài dòng')
+                    .carousel-cell: +pro-item('5.jpg', 'Tiêu đề sản phẩm dài rất dài khoảng ba bốn dòng')
+        
         .block-bg.about-section.py-5.py-xl-6
             .container 
                 .heading-ux.d-flex.mb-3
