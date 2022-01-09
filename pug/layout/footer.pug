@@ -1,60 +1,39 @@
 block footer
     footer.footer
-        svg.position-absolute.bottom-100.start-0(version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 83")
-            path.st0(fill="#ff5722" d="M1920,83H0V42c0,0,384,38,820,38c520,0,1100-80,1100-80V83z")
-        svg.position-absolute.bottom-100.start-0(version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 30")
-            path.st1(fill="#34486f" d="M1920,30H0V0c0,0,585,27,960,27c363,0,960-27,960-27V30z")
         .container
             .row
-                .footer-col.col-md-4
+                .footer-col.col-md-3
+                    .footer-tt.tt-xs.text-uppercase Thông tin
+                    ul.list-style-angle 
+                        li: +a('#', '', 'Về chúng tôi')
+                        li: +a('#', '', 'Dịch vụ khách hàng')
+                        li: +a('#', '', 'Chính sách CTV')
+                        li: +a('#', '', 'Sản phẩm bán chạy')
+                        li: +a('#', '', 'Liên hệ')
+                .footer-col.col-md-3
+                    .footer-tt.tt-xs.text-uppercase Chính sách
+                    ul.list-style-angle 
+                        li: +a('privacy.html', '', 'Hỗ trợ mua hàng')
+                        li: +a('privacy.html', '', 'Chính sách bảo hành')
+                        li: +a('privacy.html', '', 'Chính sách đổi trả')
+                        li: +a('privacy.html', '', 'Phương thức thanh toán')
+                        li: +a('privacy.html', '', 'Chương trình ưu đãi')
+                .footer-col.col-md-3
+                    .footer-tt.tt-xs.text-uppercase Sản phẩm chính
+                    ul.list-style-angle 
+                        li: +a('#', '', 'Máy đo nồng độ Oxy')
+                        li: +a('#', '', 'Kit Test nhanh')
+                        li: +a('#', '', 'Máy thở')
+                        li: +a('#', '', 'Máy đo huyết áp')
+                        li: +a('#', '', 'Máy tạo Oxy')
+                .footer-col.col-md-3.col-info
                     .footer-tt.tt-xs.text-uppercase Liên hệ
                     +contact_info()
-                    +list_social('mt-2')
-                    
-                .footer-col.col-md-4.news.d-none.d-md-block
-                    .footer-tt.tt-xs.text-uppercase Tin tức & sự kiện
-                    .content.footer-news
-                        .block.d-flex
-                            +a('news-detail.html', 'absolute')
-                            .thumb-res(style="background-image:url('css/skin/news/1.jpg')")
-                            .info
-                                | Rực rỡ sắc màu lễ hội diều Đà Nẵng-Điểm hẹn mùa Hè năm 2018 - Báo Gia Lai
-                        .block.d-flex
-                            +a('news-detail.html', 'absolute')
-                            .thumb-res(style="background-image:url('css/skin/news/1.jpg')")
-                            .info
-                                | Lễ hội thả diều quốc tế ở Vũng Tàu - Du lịch nào! | Du lịch nào!
-                        .block.d-flex
-                            +a('news-detail.html', 'absolute')
-                            .thumb-res(style="background-image:url('css/skin/news/1.jpg')")
-                            .info
-                                | Set kèo đi gấp lễ hội diều quốc tế tại Vũng Tàu đang gây sốt - Metrip.Vn
-                            
-                .footer-col.col-md-4.gallery.d-none.d-md-block
-                    .footer-tt.tt-xs.text-uppercase Thư viện
-                    .content
-                         ul.footer-gallery.d-grid.list-unstyled
-                            li.item
-                                +a('gallery.html', 'thumb-res mb-0')(style="background-image:url('css/skin/news/1.jpg')")
-                            li.item
-                                +a('gallery.html', 'thumb-res mb-0')(style="background-image:url('css/skin/news/1.jpg')")
-                            li.item
-                                +a('gallery.html', 'thumb-res mb-0')(style="background-image:url('css/skin/news/1.jpg')")
-                            li.item
-                                +a('gallery.html', 'thumb-res mb-0')(style="background-image:url('css/skin/news/1.jpg')")
-                            li.item
-                                +a('gallery.html', 'thumb-res mb-0')(style="background-image:url('css/skin/news/1.jpg')")
-                            li.item
-                                +a('gallery.html', 'thumb-res mb-0')(style="background-image:url('css/skin/news/1.jpg')")
-
-        .container.border-bottom.border-2.opacity-10.mt-3.mt-md-0
         .copyr
             .container
                 .d-md-flex.justify-content-between.align-items-center
-                    .col-left
+                    .my-3.col-left
                         | © 2021 <b>!{companyName}</b>. All Rights Reserved. 
-                        span.text-nowrap Powered by 
-                            a(href="//bizmac.com" title="BizMaC, Thiết kế website chuyên nghiệp" target="_blank") BizMaC
-                    .col-right
-                        //- | Lượt truy cập: 1.452  |  Online: 153
-                        a(href="#" target="_blank"): img(src="css/skin/thongbao-bct.png" width="120px" alt="")
+                    .my-3.col-right.d-flex.align-items-center
+                        +list_social()
+                        a(href="#" target="_blank" class="ml-2"): img(src="css/skin/thongbao-bct.png" width="110px" alt="")

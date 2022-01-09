@@ -1,6 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@400;500;600;700&display=swap');
 
-$font-family        : "Sarabun", sans-serif; // Proxima Nova
+$font-family        : "Encode Sans Condensed", sans-serif;
 $font-tt            : $font-family;
 $font-size          : 1rem;
 $line-height        : 1.65;
@@ -46,8 +48,8 @@ $pagination-disabled-border-color       : rgba($primary, .1);
 $breadcrumb-font-size                   : 14px;
 $breadcrumb-padding-y                   : 10px;
 $breadcrumb-margin-bottom               : 0;
-$breadcrumb-active-color                : #fff;
-$breadcrumb-divider-color               : #fff;
+$breadcrumb-active-color                : #232330;
+$breadcrumb-divider-color               : #232330;
 //
 $table-cell-vertical-align              : middle;
 $table-bg                               : #ffffff;

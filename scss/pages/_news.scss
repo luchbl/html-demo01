@@ -1,0 +1,27 @@
+.list-news {
+    --tt: 1.125rem;
+    .tt {
+        color: darken($secondary, 15%);
+        margin-bottom: .5rem;
+        @include ellips(4);
+        font-weight: 600;
+    }
+    .date {
+        font-size: 13px;
+        color: $gray-500;
+    }
+    .desc {
+        @include ellips(3);
+        margin-top: .5rem;
+    }
+    .block:hover {
+        .tt {
+            color: $danger;
+        }
+    }
+}
+@include media-breakpoint-up(xl) {
+    .list-news {
+
+    }
+}

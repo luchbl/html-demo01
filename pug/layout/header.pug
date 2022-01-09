@@ -15,7 +15,7 @@ block headder
                                 .tt Bộ đồ bảo hộ chống Covid-19 WHO
                             .item
                                 +a('product-detail.html', 'absolute')
-                                .thumb: img(src="css/skin/products/1.jpg" alt="")
+                                .thumb: +img("products/1.jpg")
                                 .info
                                     .tt De Ville Prestige Automatic Men's Watch 424.13.40.21.03.002
                                     .price
@@ -23,7 +23,7 @@ block headder
                                         del.price-origin 170.000đ
                             .item
                                 +a('product-detail.html', 'absolute')
-                                .thumb: img(src="css/skin/products/1.jpg" alt="")
+                                .thumb: +img("products/2.jpg")
                                 .info
                                     .tt De Ville Automatic Silver Dial Men's Watch 424.13.40.20.02.006
                                     .price
@@ -37,14 +37,14 @@ block headder
                         span.icon.fa.fa-phone.fa-flip-horizontal
                         span.text.lh-1.ml-2
                             span.fw-medium.block.fs-12 Hotline
-                            span.b.fw-bold
+                            b.b
                                 +phone_text()
                 .header-right-item.hotline
                     +mail_a('icon-group d-flex align-items-center')
                         span.icon.fa.fa-envelope
                         span.text.lh-1.ml-2
-                            span.fw-medium.block.fs-12 Hotline
-                            span.b.fw-bold
+                            span.fw-medium.block.fs-12 Email
+                            b.b
                                 +mail_text()
                 .header-right-item.search-item
                     button#search-toggle.icon.toggle-form-search.far.fa-search
@@ -53,7 +53,7 @@ block headder
                 //-         span.icon.icon-user.bi.bi-person-circle
                 //-         span.text.ml-2.lh-1
                 //-             span.fw-medium.block.fs-12 Đăng nhập
-                //-             span.b.fw-bold Thành Viên
+                //- b.b Thành Viên
                 //-     .dd-menu
                 //-         a.dd-item(href="#" title="" alt="")
                 //-             span.bi.bi-box-arrow-in-right
@@ -74,8 +74,7 @@ block headder
                         .drop-item
                             .d-flex
                                 .thumb-res
-                                    a(href="product-detail.html" title="" alt="")
-                                        img(src="css/skin/products/1.jpg" alt="")
+                                    a(href="product-detail.html" title="" alt=""): +img("products/1.jpg")
                                 .info
                                     a.tt.fw-medium(href="product-detail.html" title="" alt="")
                                         | Pellentesque quis enim vitae purus finibus dapibus.
@@ -86,8 +85,7 @@ block headder
                         .drop-item
                             .d-flex
                                 .thumb-res
-                                    a(href="product-detail.html" title="" alt="")
-                                        img(src="css/skin/products/1.jpg" alt="")
+                                    a(href="product-detail.html" title="" alt=""): +img("products/2.jpg")
                                 .info
                                     a.tt.fw-medium(href="product-detail.html" title="" alt="")
                                         | Vivamus vel arcu sit amet sapien consequat pharetra.

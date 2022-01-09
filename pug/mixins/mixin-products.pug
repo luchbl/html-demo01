@@ -2,8 +2,7 @@
 mixin pro-item(img, tt)
     .block 
         +a('product-detail.html', 'absolute',)
-        .thumb-res.square 
-            +img('products/1.jpg')
+        .thumb-res.tall: +img('products/'+img)(class="fit-cover")
         .info 
             .tt=tt
             .price 

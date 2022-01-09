@@ -22,11 +22,15 @@
     .flickity-page-dots {
         display: none;
     }
+    .thumb-res,
+    .thumb-res img {
+        border-radius: $border-radius;
+    }
     .tt {
         font-weight: 500;
         @include ellips(2);
         line-height: 1.4;
-        height: floor(16px * 1.4) * 2;
+        //height: floor(16px * 1.4) * 2;
     }
     .btn-addtocart {
         display: inline-flex;
@@ -52,11 +56,11 @@
 @include media-breakpoint-up(lg) {
     .list-products {
         .tt {
-            font-size: 17px;
-            height: floor(17px * 1.4) * 2;
+            //font-size: 17px;
+            //height: floor(17px * 1.4) * 2;
         }
         .price {
-            font-size: 18px;
+            //font-size: 18px;
         }
     }
 }

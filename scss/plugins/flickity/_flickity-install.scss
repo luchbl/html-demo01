@@ -185,10 +185,12 @@
     }
     .tt-lg {
         margin: 0;
+        color: #fff;
     }
     .desc {
     	font-size: var(--desc-font-size, .9375rem);
     	@include ellips(4);
+    	color: #fff;
     }
     .desc,
     .button {
@@ -217,12 +219,13 @@
     		opacity: 1;
     	}
     }
+    --tt-lg: 1.25rem;
 }
 @include media-breakpoint-up(md) {
 	.home-slider {
 		--slide-height: calc(700 / 1920 * 100%);
-		//--tt-lg: calc(24px + 1.25vw);
-		--desc-font-size: 1.075rem;
+		--tt-lg: 1.5rem;
+		//--desc-font-size: 1.05rem;
 		--line-space: 1.125rem;
 		--text-max-width: 70%;
 		
@@ -235,8 +238,8 @@
 @include media-breakpoint-up(lg) {
 	.home-slider {
 		//--slide-height: calc(720 / 1920 * 100%);
-		//--tt-lg: calc(24px + 1.25vw);
-		--desc-font-size: 1.125rem;
+		--tt-lg: calc(22px + 1.125vw);
+		--desc-font-size: 1.05rem;
 		--text-max-width: 62%;
 
 		.flickity-button {
@@ -250,7 +253,15 @@
 		}
 	}
 }
+@include media-breakpoint-up(xxl) {
+	.home-slider {
+		--slide-height: calc(600 / 1920 * 100%);
+		--tt-lg: calc(24px + 1.125vw);
+		--desc-font-size: 1.125rem;
+	}
+}
 // 
+.carousel-c1md3,
 .carousel-c2md4,
 .carousel-c2md3,
 .carousel-c2md5 {
@@ -266,7 +277,11 @@
     	bottom: -20px;
     }
 }
+.carousel-c1md3 {
+	--cell-count: 1;
+}
 @include media-breakpoint-up(md) {
+	.carousel-c1md3,
 	.carousel-c2md3 {
 		--cell-count: 3;
 		--cell-mr: 4%;

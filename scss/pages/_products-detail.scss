@@ -76,6 +76,12 @@
 		font-size: 1.375rem;
 	}
 }
+.block-note {
+	border: 1px solid rgba($primary,.5);
+	padding: 1.125rem;
+	border-radius: $border-radius;
+	color: darken($primary, 25%);
+}
 @include media-breakpoint-up(xl) {
     .brief {
         .col-slide {

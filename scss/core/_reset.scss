@@ -145,7 +145,7 @@ a.absolute {
 	    "wide" 	   var(--thumb-res-wide, 58%),
 	    "wide-lg"  var(--thumb-res-wide-lg, 62.5%),
 	    "square"   var(--thumb-res-square, 100%),
-	    "tall" 	   var(--thumb-res-tall, 125%),
+	    "tall" 	   var(--thumb-res-tall, 120%),
 	);
 	@each $name, $val in $thumb-res {
 		&.#{$name} {
@@ -314,7 +314,7 @@ a.absolute {
 #backtop {
 	position: fixed;
 	right: 1.25rem;
-	bottom: 2.0375rem;
+	bottom: 3.5rem; //; 2.0375rem;
 	z-index: 9999;
 	background-color: #ed0734;
 	color: #fff;
@@ -334,7 +334,7 @@ a.absolute {
     @include media-breakpoint-up(lg) {
     	width: 44px;
     	height: 44px;
-		right: 2.0375rem;
+		right: 1.0375rem;
     }
 }
 [class*="material-icons"] {

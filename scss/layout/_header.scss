@@ -80,6 +80,7 @@
 		color: $danger;
 		margin-top: 1px;
 		display: block;
+		font-weight: 600;
 	}
     
     .hotline,
@@ -177,7 +178,7 @@
 			}
 		}
 		&.stick {
-			position: relative;
+			//position: relative;
 		}
 	}
 	.logo {

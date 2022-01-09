@@ -5,12 +5,12 @@ block vars
 	- wrapper_class = ''
 	- wrapper_id = ''
 	- home_slider = false
-	- banner_top = false
-	- banner_image = ''
+	- banner_top = true
+	- banner_image = 'banner.jpg'
 	- login = false
 
 append breadcrumb 
-	+breadcrumb({})
+	+breadcrumb({'products.html': 'Sản phẩm'})
 block mainer
 	main.mainer
 		.page-detail.py-5.py-xl-6
@@ -37,30 +37,42 @@ block mainer
 									+a('css/skin/products/4.jpg', 'thumb-res square mb-0')(data-fancybox="pd" title="" alt=""): +img('products/4.jpg')
 
 					.col-info.col-md-6.mb-4.pl-xl-4
-						h2.tt-lg.tt-pd Tiêu đề hiển thị Tên sản phẩm nè
+						h2.tt-lg.tt-pd Khẩu trang cao cấp BN95 Bảo Minh
 						hr
 						.msp.text-muted Mã SP: 0123455
 						.text-single !{'<span class="text-success">Còn hàng</span>'}
-						.block-price.mt-3
+						.block-price.mt-2
 							.price
 								span.price-sale 799,000!{'<u>đ</u>'}
 								del.price-origin 999,000!{'<u>đ</u>'}
-						.block-size.mt-3
-							
 						.block-desc.mt-3
-							| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-						.button-group.mt-3
-							+phone_a()(class="btn btn-danger text-uppercase px-4 mr-2 fs-18")
-								span.mr-2.far.fa-mobile
-								+phone_text()
+							| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Standard dummy text ever since the 1500s.
 						.button-grid-half.mt-3
 							button.btn.btn-primary Thêm vào giỏ
 							button.btn.btn-danger Đặt hàng
+						.block-note.mt-4
+							.picon 
+								span.far.fa-award
+								| Sản phẩm chính hãng 100%
+							.picon 
+								span.far.fa-phone.fa-flip-horizontal
+								| Hỗ trợ bán hàng: 
+								br
+								+phone_a('text-nowrap')
+									+phone_text()
+									|  (Mr. Thạnh) 
+								span  -  
+								+phone_a2('text-nowrap')
+									+phone_text2()
+									|  (Ms. Trâm) 
+							.picon 
+								span.far.fa-truck
+								| Miễn phí vận chuyển cho đơn hàng từ 500K
 				//- 
 				.nav-nowrap
 					.nav.nav-tab-detail
 						+a('#tab01', 'nav-link active', 'Chi tiết Sản phẩm')(data-bs-toggle="tab" area-selected="true")
-						+a('#tab02', 'nav-link', 'Chính sách')(data-bs-toggle="tab" area-selected="false")
+						+a('#tab02', 'nav-link', 'Hướng dẫn mua hàng')(data-bs-toggle="tab" area-selected="false")
 						+a('#tab03', 'nav-link', 'Hỏi đáp & Bình luận')(data-bs-toggle="tab" area-selected="false")
 				.tab-content
 					.tab-pane.fade.active.show#tab01 
@@ -121,6 +133,21 @@ block mainer
 							
 					.tab-pane.fade#tab03
 						.fb-comments(data-href="https://www.facebook.com/phuongthuyistore", data-width="100%", data-numposts="5")
+				.related-post.my-45
+					.heading-ux.d-flex.mb-3
+						h2.tt-sm.text-uppercase Sản phẩm tương tự
+						+a('products.html', 'text-link-more text-decoration-none')
+							| Xem thêm
+							i.far.fa-chevron-right
+					.carousel-c2md4.list-products
+						.carousel-cell: +pro-item('1.jpg', 'Cồn Y Tế Sát Khuẩn Chanh Sả 100ml')
+						.carousel-cell: +pro-item('2.jpg', 'Cốn Y Tế Ethanol 5 Lít 70 Độ')
+						.carousel-cell: +pro-item('3.jpg', 'Cồn Y Tế ETHANOL 500ML 90 độ')
+						.carousel-cell: +pro-item('6.jpg', 'Cồn Y Tế Sát Khuẩn Chanh Sả 100ml')
+						.carousel-cell: +pro-item('7.jpg', 'Cốn Y Tế Ethanol 5 Lít 70 Độ')
+						.carousel-cell: +pro-item('8.jpg', 'Cồn Y Tế ETHANOL 500ML 90 độ')
+						.carousel-cell: +pro-item('9.jpg', 'Nước Muối Natri Cloride 0,9% 500ML')
+						.carousel-cell: +pro-item('10.jpg', 'Cồn Y Tế Sát Khuẩn 30 Lít 70 Độ')
 
 append scripts 
 	+fancybox()

@@ -1,0 +1,64 @@
+extends template/template
+block vars
+	- title = 'Sản phẩm'
+	- menu_active = 'products'
+	- wrapper_class = ''
+	- wrapper_id = ''
+	- home_slider = false
+	- banner_top = true
+	- banner_image = 'banner.jpg'
+	- login = false
+
+append breadcrumb 
+	+breadcrumb({'products.html':'Sản phẩm'})
+block mainer
+	article.nav-cates
+		.container
+			.carousel-cate
+				.carousel-cell 
+					+a('products.html', 'block d-flex align-items-center',)
+						span.icon: +img('icon/1.png')
+						span.text.text-capitalize Cồn Y tế
+				.carousel-cell 
+					+a('products.html', 'block d-flex align-items-center',)
+						span.icon: +img('icon/2.png')
+						span.text.text-capitalize Kit Test nhanh
+				.carousel-cell 
+					+a('products.html', 'block d-flex align-items-center',)
+						span.icon: +img('icon/3.png')
+						span.text.text-capitalize Y tế gia đình
+				.carousel-cell 
+					+a('products.html', 'block d-flex align-items-center',)
+						span.icon: +img('icon/4.png')
+						span.text.text-capitalize máy đo nồng độ oxy
+				.carousel-cell 
+					+a('products.html', 'block d-flex align-items-center',)
+						span.icon: +img('icon/5.png')
+						span.text.text-capitalize khẩu trang Y tế
+				.carousel-cell 
+					+a('products.html', 'block d-flex align-items-center',)
+						span.icon: +img('icon/6.png')
+						span.text.text-capitalize các sản phẩm khác
+	main.mainer
+		.page-products.py-4
+			.container
+				.heading-ux.d-flex.flex-wrap.align-items-center.justify-content-between.mb-3
+					h2.tt-sm.text-uppercase.my-2 KHẨU TRANG Y TẾ
+					div.my-2
+						select.form-select
+							option(selected, disabled) Sắp xếp theo
+							option Cũ nhất
+							option Mới nhất
+							option Giá giảm dần
+							option Giá giảm dần
+				.list-products.row.row-cols-2.row-cols-md-4.g-3.g-lg-4
+					.col.mb-4: +pro-item('1.jpg', 'Cồn Y Tế Sát Khuẩn Chanh Sả 100ml')
+					.col.mb-4: +pro-item('2.jpg', 'Cốn Y Tế Ethanol 5 Lít 70 Độ')
+					.col.mb-4: +pro-item('3.jpg', 'Cồn Y Tế ETHANOL 500ML 90 độ')
+					.col.mb-4: +pro-item('4.jpg', 'Nước Muối Natri Cloride 0,9% 500ML')
+					.col.mb-4: +pro-item('5.jpg', 'Cồn Y Tế Sát Khuẩn 30 Lít 70 Độ')
+					.col.mb-4: +pro-item('6.jpg', 'Cồn Y Tế Sát Khuẩn Chanh Sả 100ml')
+					.col.mb-4: +pro-item('7.jpg', 'Cốn Y Tế Ethanol 5 Lít 70 Độ')
+					.col.mb-4: +pro-item('8.jpg', 'Cồn Y Tế ETHANOL 500ML 90 độ')
+					.col.mb-4: +pro-item('9.jpg', 'Nước Muối Natri Cloride 0,9% 500ML')
+					.col.mb-4: +pro-item('10.jpg', 'Cồn Y Tế Sát Khuẩn 30 Lít 70 Độ')

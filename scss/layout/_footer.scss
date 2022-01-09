@@ -43,19 +43,8 @@
         margin: 0;
         padding: 0;
     }
-    li {
-        position: relative;
-        padding-left: 18px;
-        &:before {
-            content: '\f105';
-            font-family: 'font awesome 5 pro';
-            @include absolute(5px,null,null,2px);
-            line-height: 1;
-            opacity: .5;
-        }
-    }
     a {
-        @include a-hover-underline(#fff);
+        @include a-hover-underline($primary);
         margin-bottom: 6px;
         color: inherit;        
         #{$fa-all} {
@@ -66,85 +55,99 @@
 }
 // Footer
 .footer {
-    $footer-background: #4b4d82; // #34486f;
-    $footer-color: #ddd;
-    $tt-color: #fff;
+    $footer-background: #ecf8f8;
+    $footer-color: #4d4f67;
+    $tt-color: darken($secondary, 25%);
     --footer-font-size: 15px;
-
-    .st1 {
-        fill: $footer-background;
+    
+    &-outside {
+        margin-top: 1.5rem;
     }
-
+    border-radius: 1.5rem 1.5rem 0 0;
+    margin-top: -1.5rem;
+    border-top: 4px solid $primary;
     background-color: $footer-background;
     color: $footer-color;
     font-size: var(--footer-font-size);
     position: relative;
     z-index: 1;
-
-    &-bg {
-        @extend %bg-image;
-        @extend %absolute-all;
-        z-index: -1;
-        pointer-events: none;
-        opacity: .2;
-    }
+    padding-top: 2rem;
     &-tt {
         color: $tt-color;
-        margin-bottom: 24px;
+        margin: 0;
+        padding: .9375rem 0;
+        border-bottom: 1px solid rgba(#000,.1);
+        position: relative;
         &:after {
-            content: '';
-            display: block;
-            width: 26px;
-            height: 3px;
-            background: yellow;
-            margin: 5px 0 12px;
-        }
-    }
-    &-news {
-        .thumb-res {
-            width: 90px;
-            flex: 0 0 auto;
-            height: 60px;
-            margin: 0 16px 0 0;
-        }
-        .block {
+            content: '\f107';
+            font-family: 'font awesome 5 pro';
+            @include absolute(0,0,0);
+            font-weight: 400;
+            display: flex;
             align-items: center;
-            + .block {
-                margin-top: 13px;
-            }
-        }
-        .info {
-            @include ellips(2);
+            opacity: .5;
         }
     }
-    &-gallery {
-        grid-template-columns: auto auto auto;
-        grid-gap: 14px;
-        margin-bottom: 0;
-        .thumb-res {
-            padding-bottom: 70%;
-        }
+    .list-style-angle {
+        display: none;
+        transform: translateY(-1rem);
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.4s ease-out;
     }
     &-col {
-        margin-top: 40px;
+
+    }
+    &-col.active {
+        .list-style-angle {
+            display: block;
+            transform: none;
+            opacity: 1;
+            margin-bottom: 1rem;
+        }
+        .footer-tt {
+            border-color: transparent;
+            &:after {
+                content: '\f106';
+            }
+        }
+    }
+    .col-info .footer-tt {
+        border: none;
+        &:after {
+            display: none;
+        }
     }
     a {
         text-decoration: none;
         color: inherit;
     }
     .copy, .copyr {
-        padding: 12px 0;
+        padding: 1px 0;
         position: relative;
-        color: rgba(#fff,.5);
+        border-top: 1px solid rgba(#000,.1);
+        margin-top: 1.5rem;
     }
 }
 @include media-breakpoint-up(md) {
     .footer {
-        &-col {
-            margin-bottom: 30px;
+        padding-top: 0;
+        &-tt {
+            border: none;
+            padding: 0 !important;
+            margin-bottom: 1.25rem;
+            &:after {
+                display: none;
+            }
         }
-        &-gallery {
-            grid-template-columns: auto auto;
+        .list-style-angle {
+            display: block;
+            opacity: 1;
+            transform: none;
+            margin: 0 !important;
+        }
+        &-col {
+            width: 50%;
+            margin-top: 2rem;
         }
         .copy, .copyr {
             .col-left,
@@ -156,8 +159,11 @@
 }
 @include media-breakpoint-up(lg) {
     .footer {
-        &-gallery {
-            grid-template-columns: auto auto auto;
+        &-col {
+            width: 22%;
+            &.col-info {
+                width: 34%;
+            }
         }
     }
 }

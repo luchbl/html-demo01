@@ -3,14 +3,14 @@ include mixin-news
 include mixin-js
 
 //- PHAN 1: CAU HINH THONG TIN WEBSITE
-- phoneNumber = '028 1234 5678'
-- mailAddress = 'info@support.com.vn'
-- Address = '99 Lê Quốc Hưng, Phường 13, Quận 4, Tp. Hồ Chí Minh'
+- phoneNumber = '0922 75 1111'
+- mailAddress = 'phucthanh@gmail.com'
+- Address = '35/24 Nguyễn Hữu Tiến, Tây Thạnh, Tân Phú, Tp.HCM'
 - Fax = 'Fax: 028 1234 5678'
-- web = 'www.tenwebsite.com'
-- companyName = 'ABC Desicom'
+- web = 'www.thietbiyteso.com'
+- companyName = 'Thiết bị Y Tế số'
 
-- phoneNumber2 = '0123 456 789'
+- phoneNumber2 = '0933 11 45 22'
 
 - path = 'css/skin/'
 
@@ -95,9 +95,16 @@ mixin contact_info()
     .picon
         i.far.fa-phone.fa-flip-horizontal
         +phone_a()
+            +phone_text()
+            |  (Mr. Thạnh)
     .picon
-        i.far.fa-fax
-        +fax()
+        i.far.fa-phone.fa-flip-horizontal
+        +phone_a2()
+            +phone_text2()
+            |  (Ms. Trâm)
+    //- .picon
+    //-     i.far.fa-fax
+    //-     +fax()
     .picon
         i.far.fa-globe
         +website()
@@ -106,7 +113,7 @@ mixin contact_info()
 mixin list_social(className)
     .list-icon-social(class=className)
         +a('#', 'btn rounded-circle bg-gradient btn-facebook'): span.bi.bi-facebook
-        +a('#', 'btn rounded-circle bg-gradient btn-twitter'): span.bi.bi-twitter
+        //- +a('#', 'btn rounded-circle bg-gradient btn-twitter'): span.bi.bi-twitter
         +a('#', 'btn rounded-circle bg-gradient btn-youtube'): span.bi.bi-youtube
         +a('#', 'btn rounded-circle bg-gradient btn-instagram'): span.bi.bi-instagram
         +a('#', 'btn rounded-circle bg-gradient btn-zalo'): span.icon-zalo-chat

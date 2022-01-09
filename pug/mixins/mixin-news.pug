@@ -1,1 +1,10 @@
 //- mixin news
+mixin news-item(img, tt, desc)
+    .block 
+        +a('news-detail.html', 'absolute')
+        .thumb-res.wide: +img('news/'+img)(class="fit-cover")
+        .info
+            .tt=tt 
+            .date Thứ 4, 25/12/2021
+            .desc=desc
+        

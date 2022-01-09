@@ -37,16 +37,6 @@ $('#form-search .form-control').on('focusout', function() {
     $('#form-search').removeClass('focus');
 });
 
-// line - d-width
-$('.d-width').each(function () {
-    var dw = $(this).attr('width');
-    var dh = $(this).attr('height');
-    $(this).css({
-        'width': dw,
-        'height': dh,
-    });
-});
-
 // click to active victim
 $('[data-clickjs]').on('click', function () {
     var this_atr = $(this).attr('data-active');
@@ -54,6 +44,11 @@ $('[data-clickjs]').on('click', function () {
     $(this).toggleClass('active');
     $('html,body').toggleClass(this_atr+'-open');
 });
+
+// footer
+$('.footer-tt').on('click', function() {
+    $(this).parent().toggleClass('active');
+})
 
 // products detail
 var detail_pro = $('#toggleContent');
