@@ -17,13 +17,13 @@
     }
 }
 $tt: (
-    tt      var(--tt, #{$font-size})    1.4  -.15px,
-    tt-xs   var(--tt-xs, 18px)          1.4  -.2px,
-    tt-sm   var(--tt-sm, 22px)          1.4  -.25px,
-    tt-md   var(--tt-md, 24px)          1.3  -.25px,
-    tt-lg   var(--tt-lg, 28px)          1.3  -.5px,
-    tt-xl   var(--tt-xl, 34px)          1.2  -.75px,
-    tt-xxl  var(--tt-xxl, 40px)         1.2  -1px,
+    tt      var(--tt, #{$font-size})    1.4  0,
+    tt-xs   var(--tt-xs, 18px)          1.4  0,
+    tt-sm   var(--tt-sm, 22px)          1.4  0,
+    tt-md   var(--tt-md, 24px)          1.3  0,
+    tt-lg   var(--tt-lg, 28px)          1.3  0,
+    tt-xl   var(--tt-xl, 34px)          1.2  0,
+    tt-xxl  var(--tt-xxl, 40px)         1.2  0,
 );
 @each $name, $fontSize, $lineHeight, $letterSpacing in $tt {
     .#{$name} {

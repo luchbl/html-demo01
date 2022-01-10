@@ -1,10 +1,12 @@
 (function ($) {
+    
+    var topspace = 140;
+
     $('[data-wrapper]').each(function () {
         var t = $(this);
         var sidebar = $(this).find('[data-sidebar]');
         var mainbody = $(this).find('[data-mainbody]');
         var screen = 768;
-        var topspace = 60; // top: 65px // custom
 
         $('<div class="anchor-top"></div>').prependTo(sidebar);
         $('<div class="anchor-bottom"></div>').appendTo(t);
@@ -62,11 +64,10 @@
     if ($('.social-stick').length) {
         $('<div class="s-anchor-b" style="position:absolute;bottom:0;"></div>').appendTo('.content-master');
         var socialstick = $('.social-stick');
-        var space = $('.header').height();
         var screen = 768;
         function sticksc() {
             var ypos = $('.social-stick').parent();
-            var winpos = $(window).scrollTop() + space;
+            var winpos = $(window).scrollTop() + topspace;
             // stick
             (winpos > ypos.offset().top) ? socialstick.addClass('is-stick') : socialstick.removeClass('is-stick');
             // stuck

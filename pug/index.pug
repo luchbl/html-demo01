@@ -74,11 +74,8 @@ block mainer
                         | Xem thêm
                         i.far.fa-chevron-right
                 .carousel-c1md3.list-news
-                    .carousel-cell
-                        +news-item('1.jpg', 'Làm gì để hạn chế các triệu chứng nguy hiểm ở người nhiễm SARS-CoV-2?', 'Cần phải làm gì?Để giảm nhẹ các triệu chứng ở người nhiễm SARS-CoV-2, bạn có thể áp dụng một số biện pháp đơn giản, dễ làm và có hiệu quả, an toàn ...')
-                    .carousel-cell
-                        +news-item('2.jpg', '2 lý do chuyên gia Viện Vệ sinh dịch tễ TW khuyến cáo người đã tiêm vắc xin COVID-19 vẫn phải tuân thủ 5K', 'Tiêm vắc xin COVID-19 là biện pháp phòng bệnh chủ động rất quan trọng. Tuy nhiên người đã được tiêm vắc xin COVID-19, đặc biệt là những người mới')
-                    .carousel-cell
-                        +news-item('3.jpg', 'Dinh dưỡng cho người sau tiêm vắc xin phòng COVID-19', 'Bổ sung nước cho cơ thểNhu cầu nước hàng ngày: mỗi ngày, người trưởng thành cần khoảng 2.500 ml/ngày, trong đó nước uống bổ sung khoảng 1,2 – 1,4')
-                    .carousel-cell
-                        +news-item('4.jpg', 'Cảnh báo: Nguy cơ rối loạn tâm thần gia tăng trong đại dịch COVID-19', 'Có nhiều yếu tố tác động khiến bệnh nhân tâm thần gia tăng và trở nên trầm trọng hơn trong đại dịch COVID-19.Theo GS. TS. BS. Cao Tiến Đức - Nguyên')
+                    .carousel-cell: +news-item('1.jpg', news1, desc1)
+                    .carousel-cell: +news-item('2.jpg', news2, desc2)
+                    .carousel-cell: +news-item('3.jpg', news3, desc3)
+                    .carousel-cell: +news-item('4.jpg', news4, desc4)
+                    .carousel-cell: +news-item('5.jpg', news4, desc1)

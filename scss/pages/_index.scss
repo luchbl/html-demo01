@@ -57,6 +57,9 @@
 		}
 	}
 }
+.mainer:not(.home-page) {
+	padding-bottom: 2rem;
+}
 // cates
 .nav-cates {
 	background: #fafafa;

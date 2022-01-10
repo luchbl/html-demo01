@@ -13,15 +13,95 @@
     .desc {
         @include ellips(3);
         margin-top: .5rem;
+        color: $desc;
     }
     .block:hover {
         .tt {
             color: $danger;
         }
     }
+    .col-12 .block {
+        margin-bottom: 2.5rem;
+    }
+}
+@include media-breakpoint-up(md) {
+    .list-news {
+        .col-12 {
+            --tt: 1.25rem;
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .list-news {
+        .col-12 {
+            --tt: 1.125rem;
+
+            .block {
+                display: flex;
+                align-items: flex-start;
+            }
+            .thumb-res {
+                width: 40%;
+                padding-bottom: 40% * .6;
+                flex: 0 0 auto;
+                margin: 0 1.125rem 0 0;
+            }
+        }
+    }
 }
 @include media-breakpoint-up(xl) {
     .list-news {
+        .col-12 {
+            .thumb-res {
+                margin-right: 1.5rem;
+            }
+            .info {
+                padding-top: .5rem;
+            }
+        }
+    }
+}
+@include media-breakpoint-up(xxl) {
+    .list-news {
+        .col-12 {
+            --tt: 1.375rem;
+            .info {
+                padding-top: .75rem;
+            }
+        }
+    }
+}
 
+
+
+// list news sidebar
+.sidebar .pane + .pane {
+    margin-top: 2rem;
+}
+.pane-list {
+    .thumb {
+        width: 105px;
+        height: 65px;
+        flex: 0 0 auto;
+        margin-right: .75rem;
+    }
+    .tt {
+        margin: 0;
+        font-weight: 500;
+        @include ellips(2);
+    }
+    .block {
+        align-items: center;
+    }
+    .block + .block {
+        margin-top: 1.25rem;
+    }
+    .thumb, img {
+        border-radius: $border-radius;
+    }
+    .block:hover {
+        .tt {
+            color: $danger;
+        }
     }
 }

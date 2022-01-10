@@ -128,14 +128,15 @@ mixin a(href, className, value)
             block
 
 //- breadcrumb
-mixin breadcrumb(listPage)
+mixin breadcrumb(listPage, active)
     nav(arial-label="breadcrumb")
         ol.breadcrumb
             li.breadcrumb-item
                 +a('index.html',): i.far.fa-home
             each name, href in listPage
                 li.breadcrumb-item: a(href=href title="" alt="" target="_self")= name
-            li.breadcrumb-item.active=title
+            if active
+                li.breadcrumb-item.active=active
 
 //- pagination
 mixin pagination(className)

@@ -5,7 +5,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 1.4;
-    //font-family: 'Roboto Condensed', $font-family;
+
     &-sale {
         margin-right: .25rem;
     }
@@ -16,6 +16,17 @@
     }
     u, del {
         margin-left: 2px;
+    }
+}
+.heading-ux {
+    .form-select,
+    .form-control,
+    .nice-select {
+        padding-top: .25rem;
+        padding-bottom: .25rem;
+        &:focus {
+            box-shadow: none;
+        }
     }
 }
 .list-products {
@@ -30,7 +41,11 @@
         font-weight: 500;
         @include ellips(2);
         line-height: 1.4;
-        //height: floor(16px * 1.4) * 2;
+        //height: floor(15px * 1.4) * 2;
+    }
+    .price,
+    .tt {
+        font-size: 15px;
     }
     .btn-addtocart {
         display: inline-flex;
@@ -55,12 +70,14 @@
 }
 @include media-breakpoint-up(lg) {
     .list-products {
-        .tt {
-            //font-size: 17px;
-            //height: floor(17px * 1.4) * 2;
-        }
+        --bs-gutter-x: 1.9375rem;
+    }
+}
+@include media-breakpoint-up(xl) {
+    .list-products {
+        .tt,
         .price {
-            //font-size: 18px;
+            font-size: 16px;
         }
     }
 }
