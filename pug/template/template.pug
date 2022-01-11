@@ -22,8 +22,6 @@ html
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
     body
         .preloader
-            .shape
-            .shape
             .preloader-in: img(src="css/skin/logo.png" alt="Loading...")
         .wrapper(class=wrapper_class id=wrapper_id)
             block header
@@ -37,7 +35,7 @@ html
                 //- content here
             block footer
                 include ../layout/footer
-        button#backtop.bi.bi-chevron-up(role="button")
+        button#backtop.far.fa-chevron-up(role="button")
         //- block social
         //-     include ../layout/social
         block scripts 
