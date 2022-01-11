@@ -13,7 +13,7 @@ append breadcrumb
 	+breadcrumb({'product.html': 'Sản phẩm', 'products.html':'Khẩu trang Y tế'}, 'Khẩu trang cao cấp BN95 Bảo Minh')
 block mainer
 	main.mainer
-		.page-detail.py-5.py-xl-6
+		.page-detail.py-5
 			.container
 				.row.brief.mb-4
 					.col-slide.col-md-6.mb-4
@@ -133,7 +133,8 @@ block mainer
 							
 					.tab-pane.fade#tab03
 						.fb-comments(data-href="https://www.facebook.com/phuongthuyistore", data-width="100%", data-numposts="5")
-				.related-post.my-45
+				.related-post.my-45.py-45.position-relative
+					.overlay-over
 					.heading-ux.d-flex.mb-3
 						h2.tt-sm.text-uppercase Sản phẩm tương tự
 						+a('products.html', 'text-link-more text-decoration-none')

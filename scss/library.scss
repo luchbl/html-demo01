@@ -28,7 +28,6 @@
 @import "layout/search";
 @import "layout/menu-vertical";
 @import "layout/header";
-// @import "layout/menu";
 @import "layout/menu@v2";
 @import "layout/footer";
 @import "layout/banner-all";
@@ -36,7 +35,6 @@
 
 
 // Main Page
-@import "pages/block-section";
 @import "pages/index";
 @import "pages/news";
 @import "pages/news-detail";
@@ -44,3 +42,4 @@
 
 @import "pages/products";
 @import "pages/products-detail";
+@import "pages/cart";

@@ -216,3 +216,12 @@ $tab-border-color: #f1f1f1;
         padding: 1.125rem;
 	}
 }
+
+.related-post {
+	.overlay-over {
+		background: linear-gradient(to bottom, #f3f3f3, rgba(#f8f8f8,0));
+	}
+	.heading-ux > * {
+		background: #f3f3f3;
+	}
+}

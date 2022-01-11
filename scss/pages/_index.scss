@@ -57,8 +57,19 @@
 		}
 	}
 }
-.mainer:not(.home-page) {
+.wrapper:not(.home-page) .mainer {
 	padding-bottom: 2rem;
+}
+[data-relative] {
+	@extend .position-relative;
+}
+.overlay-over {
+	--b-width: 8000px;
+	@extend %absolute-all;
+    width: var(--b-width);
+    z-index: -1;
+    margin-left: calc(var(--b-width) * -.5);
+	background-color: #f9f9f9;
 }
 // cates
 .nav-cates {

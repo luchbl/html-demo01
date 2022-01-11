@@ -1,0 +1,53 @@
+extends template/template
+block vars
+	- title = 'Giỏ Hàng'
+	- menu_active = ''
+	- wrapper_class = ''
+	- wrapper_id = ''
+	- home_slider = false
+	- banner_top = true
+	- banner_image = 'banner.jpg'
+	- login = false
+
+append breadcrumb 
+	+breadcrumb({}, title)
+block mainer
+	main.mainer
+		.page-detail.py-5
+			.container
+				.container-cart.mx-auto.my-2
+					.d-flex.flex-wrap.align-items-center
+						a.mb-2.text-decoration-none.hover-link.mr-auto(href="products.html")
+							i.far.fa-chevron-left.mr-2
+							| Mua thêm sản phẩm khác
+						.mb-2.font-15.d-none.d-sm-block.text-uppercase Đơn hàng của bạn
+					.bg-white.p-3.container-cart.mx-auto.border
+						.tt-sm.text-uppercase.text-success.text-center.justify-content-center.d-flex.align-items-center.py-3
+							i.bi.bi-bag-check-fill.fa-2x.mr-3
+							span.pt-2 Đặt hàng thành công
+						hr
+						p Cảm ơn bạn đã đặt hàng tại Vũ Trang Computer. Đơn hàng của bạn đang được xử lý và chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.
+						.block-item
+							.box-info-order.bg-light.p-3.rounded
+								.d-inline-block.w-100
+									.float-left Đơn hàng: #1292123
+								ul.mb-0
+									li.mb-0
+										b Người nhận:
+										|  Quang Dung
+									li.mb-0
+										b Điện thoại:
+										|  0952125432
+									li.mb-0
+										b Địa chỉ:
+										|  124 Dien Bien Phu, Phuong 26, Quan Binh Thanh, Tp.HCM
+									li.mb-0
+										b Tổng tiền:
+										|  
+										b.text-danger
+											| 1.620.000
+											u đ
+					.text-center.my-3
+						a.text-decoration-none.hover-link(href="index.html")
+							i.far.fa-chevron-left.mr-1
+							| Tiếp tục mua hàng

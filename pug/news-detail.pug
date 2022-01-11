@@ -1,0 +1,56 @@
+extends template/template
+block vars
+    - title = 'Chuyên mục sức khỏe'
+    - menu_active = 'news'
+    - wrapper_class = ''
+    - wrapper_id = ''
+    - home_slider = false
+    - banner_top = true
+    - banner_image = 'banner.jpg'
+    - login = false
+
+append breadcrumb 
+    +breadcrumb({}, title)
+block mainer
+    main.mainer
+        .page-detail.py-5
+            .container
+                .block-sidebar(data-wrapper)
+                    .mainbody.mb-4.mb-md-0(data-mainbody)
+                        .list-news
+                            .col-12: +news-item('1.jpg', news1, desc1)
+                            .col-12: +news-item('2.jpg', news2, desc2)
+                            .col-12: +news-item('3.jpg', news3, desc3)
+                            .col-12: +news-item('4.jpg', news4, desc4)
+                            .col-12: +news-item('5.jpg', news5, desc1)
+                            .col-12: +news-item('1.jpg', news6, desc2)
+                        +pagination('mt-4')
+                    .sidebar.mb-4.mb-md-0(data-sidebar)
+                        div(data-stick data-width-fill)
+                            .pane.pane-qc
+                                +a('#', 'block mb-2',): +img('theme/banner-1.jpg')
+                                +a('#', 'block mb-2',): +img('theme/banner-2.jpg')
+                            .pane.pane-list
+                                .tt-sm.mb-3.text-uppercase.text-secondary Tin nổi bật
+                                .pane-list-item.d-flex.block 
+                                    +a('news-detail.html', 'absolute')
+                                    .thumb: +img('news/1.jpg')(class="fit-cover")
+                                    .info 
+                                        .tt Tối ưu chi phí doanh nghiệp bằng việc đặt hàng thiết bị y tế giá tại kho thietbiyteso.com
+                                .pane-list-item.d-flex.block 
+                                    +a('news-detail.html', 'absolute')
+                                    .thumb: +img('news/2.jpg')(class="fit-cover")
+                                    .info 
+                                        .tt Cồn Medi – Bảo Vệ Sức Khỏe Toàn Diện Cho Gia Đình Bạn
+                                .pane-list-item.d-flex.block 
+                                    +a('news-detail.html', 'absolute')
+                                    .thumb: +img('news/3.jpg')(class="fit-cover")
+                                    .info 
+                                        .tt Tem đảm bảo chất lượng_ Cồn Medi
+                                .pane-list-item.d-flex.block 
+                                    +a('news-detail.html', 'absolute')
+                                    .thumb: +img('news/4.jpg')(class="fit-cover")
+                                    .info 
+                                        .tt Cồn Medi – Bảo Vệ Sức Khỏe Toàn Diện Cho Gia Đình Bạn
+                    
+
