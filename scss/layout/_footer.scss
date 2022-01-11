@@ -63,9 +63,9 @@
     &-outside {
         margin-top: 1.5rem;
     }
-    border-radius: 1.5rem 1.5rem 0 0;
+    // border-radius: 1.5rem 1.5rem 0 0;
     margin-top: -1.5rem;
-    border-top: 4px solid $primary;
+    border-top: 1px solid rgba($primary, .5);
     background-color: $footer-background;
     color: $footer-color;
     font-size: var(--footer-font-size);
