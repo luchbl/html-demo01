@@ -73,7 +73,7 @@
             // stuck
             var va = $(window).scrollTop() + socialstick.height();
             var posb = $('.s-anchor-b').offset().top;
-            (posb < va + space) ? socialstick.addClass('is-stuck') : socialstick.removeClass('is-stuck');
+            (posb < va + topspace) ? socialstick.addClass('is-stuck') : socialstick.removeClass('is-stuck');
         }
         $(window).on('scroll', sticksc).trigger('scroll');
     }
