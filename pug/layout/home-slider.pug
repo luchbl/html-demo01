@@ -1,41 +1,62 @@
-article.nav-cates
-    .container
-        .carousel-cate
-            .carousel-cell 
-                +a('products.html', 'block d-flex align-items-center',)
-                    span.icon: +img('icon/1.png')
-                    span.text.text-capitalize Cồn Y tế
-            .carousel-cell 
-                +a('products.html', 'block d-flex align-items-center',)
-                    span.icon: +img('icon/2.png')
-                    span.text.text-capitalize Kit Test nhanh
-            .carousel-cell 
-                +a('products.html', 'block d-flex align-items-center',)
-                    span.icon: +img('icon/3.png')
-                    span.text.text-capitalize Y tế gia đình
-            .carousel-cell 
-                +a('products.html', 'block d-flex align-items-center',)
-                    span.icon: +img('icon/4.png')
-                    span.text.text-capitalize máy đo nồng độ oxy
-            .carousel-cell 
-                +a('products.html', 'block d-flex align-items-center',)
-                    span.icon: +img('icon/5.png')
-                    span.text.text-capitalize khẩu trang Y tế
-            .carousel-cell 
-                +a('products.html', 'block d-flex align-items-center',)
-                    span.icon: +img('icon/6.png')
-                    span.text.text-capitalize các sản phẩm khác
-section.home-slider-o
-    .home-slider
-        .carousel-cell
-            .img-slide: +img('slider/slider_01.jpg')
-            .container.absolute.d-flex
-                .text-slider
-                    .tt-lg Khẩu trang Y tế đạt chuẩn Quốc tế N95
-                    .desc Hiệu quả - an toàn - độ chính xác cao. Là thiết bị y tế cực kỳ quan trọng mà mỗi nhà nên có một cái để theo dõi, đặc biệt với những người mắc covid-19
-        .carousel-cell
-            .img-slide: +img('slider/slider_02.jpg')
-            .container.absolute.d-flex
-                .text-slider
-                    .tt-lg Máy đo nồng độ Oxy trong máu - SP02
-                    .desc Hiệu quả - an toàn - độ chính xác cao. Là thiết bị y tế cực kỳ quan trọng mà mỗi nhà nên có một cái để theo dõi, đặc biệt với những người mắc covid-19
+section.home-screen
+        .container.grid-layout
+            .grid-layout-left
+                .cate-outer
+                    .tt.tt-cate.text-uppercase
+                        span.far.fa-list.mr-2
+                        | Danh mục sản phẩm
+                    - cate1 = "Cồn Y Tế - Ethanol"
+                    - cate2 = "Kit test nhanh"
+                    - cate3 = "Y Tế Gia Đình"
+                    - cate4 = "Khẩu Trang Y Tế"
+                    - cate5 = "Máy đo nồng độ Oxy"
+                    - cate6 = "Sản phẩm khác"
+                    ul.cate-inner 
+                        li.cate-inner-item
+                            +a('products.html', 'd-flex align-items-center')
+                                span.icon: +img('icon/1.png')
+                                span.text=cate1
+                        li.cate-inner-item
+                            +a('products.html', 'd-flex align-items-center')
+                                span.icon: +img('icon/2.png')
+                                span.text=cate2
+                        li.cate-inner-item
+                            +a('products.html', 'd-flex align-items-center')
+                                span.icon: +img('icon/3.png')
+                                span.text=cate3
+                        li.cate-inner-item
+                            +a('products.html', 'd-flex align-items-center')
+                                span.icon: +img('icon/4.png')
+                                span.text=cate4
+                        li.cate-inner-item
+                            +a('products.html', 'd-flex align-items-center')
+                                span.icon: +img('icon/5.png')
+                                span.text=cate5
+                        li.cate-inner-item
+                            +a('products.html', 'd-flex align-items-center')
+                                span.icon: +img('icon/6.png')
+                                span.text=cate6
+            .grid-layout-right
+                .home-slider 
+                    .carousel-cell
+                        .img-slide: +img('slider/slider_01.jpg')
+                        .container.absolute.d-flex
+                            .text-slider
+                                .tt-lg Khẩu trang Y tế đạt chuẩn Quốc tế N95
+                                .desc Hiệu quả - an toàn - độ chính xác cao. Là thiết bị y tế cực kỳ quan trọng mà mỗi nhà nên có, đặc biệt với những người mắc covid-19
+                    .carousel-cell
+                        .img-slide: +img('slider/slider_02.jpg')
+                        .container.absolute.d-flex
+                            .text-slider
+                                .tt-lg Máy đo nồng độ Oxy trong máu - SP02
+                                .desc Hiệu quả - an toàn - độ chính xác cao. Là thiết bị y tế cực kỳ quan trọng mà mỗi nhà nên có, đặc biệt với những người mắc covid-19
+                .slide-box 
+                    .slide-box-item.block
+                        img(src='https://media.istockphoto.com/photos/diamond-on-the-water-picture-id639777488?k=20&m=639777488&s=612x612&w=0&h=f9TbqpJJjDLSoWw1zShIMIjbek7FgTZ6wpvedOVQsiM=')(class="fit-cover img-bg")
+                        .tt.text-uppercase.mb-0 Cam kết chất lượng Kim cương
+                    .slide-box-item.block
+                        img(src='https://media.istockphoto.com/photos/close-up-employee-man-hand-point-to-press-button-number-on-telephone-picture-id1127360252?k=20&m=1127360252&s=612x612&w=0&h=UtN0Da12rLSUV8JN9RNlzPO7bDD30suDBXg3vjfy26c=')(class="fit-cover img-bg")
+                        .tt.text-uppercase.mb-0 Hỗ trợ Khách hàng 24/7
+                    .slide-box-item.block
+                        img(src='https://media.istockphoto.com/vectors/pay-by-credit-card-via-electronic-wallet-wirelessly-on-phone-new-vector-id1191967417?k=20&m=1191967417&s=612x612&w=0&h=B-axQXIRN02KUJ-35r9g5sXhj1FEZCLyClpvGJyLIQY=')(class="fit-cover img-bg")
+                        .tt.text-uppercase.mb-0 Hỗ trợ thanh toán linh hoạt

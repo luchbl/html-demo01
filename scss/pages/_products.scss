@@ -1,21 +1,38 @@
 .price {
     font-weight: 600;
-    color: $danger;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    color: #f00;
     line-height: 1.4;
 
     &-sale {
-        margin-right: .25rem;
+        margin-right: .375rem;
     }
     &-origin {
         color: #929299;
         font-weight: 400;
-        font-size: 84%;
+        font-size: 90%;
+        margin-right: .375rem;
     }
     u, del {
         margin-left: 2px;
+    }
+    .saleoff {
+        position: relative;
+        color: #fff;
+        background: #f69113;
+        font-size: 80%;
+        margin: 0 5px;
+        padding: 0 1px 1px 0;
+        white-space: nowrap;
+        svg {
+            @include absolute(0,null,0);
+            height: calc(100% + 1px);
+            &.start {
+                right: 100%;
+            }
+            &.end {
+                left: 100%;
+            }
+        }
     }
 }
 .heading-ux {
