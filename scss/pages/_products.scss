@@ -20,7 +20,9 @@
         color: #fff;
         background: #f69113;
         font-size: 80%;
-        margin: 0 5px;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 7px;
         padding: 0 1px 1px 0;
         white-space: nowrap;
         svg {
@@ -62,7 +64,7 @@
     }
     .price,
     .tt {
-        font-size: 15px;
+        font-size: var(--font-size-pd, 15px);
     }
     .btn-addtocart {
         display: inline-flex;
@@ -88,13 +90,11 @@
 @include media-breakpoint-up(lg) {
     .list-products {
         --bs-gutter-x: 1.9375rem;
+        --font-size-pd: 16px;
     }
 }
 @include media-breakpoint-up(xl) {
     .list-products {
-        .tt,
-        .price {
-            font-size: 16px;
-        }
+        --font-size-pd: 17px;
     }
 }

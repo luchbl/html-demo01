@@ -59,12 +59,7 @@
     $footer-color: #4d4f67;
     $tt-color: darken($secondary, 25%);
     --footer-font-size: 15px;
-    
-    &-outside {
-        margin-top: 1.5rem;
-    }
-    // border-radius: 1.5rem 1.5rem 0 0;
-    margin-top: -1.5rem;
+
     border-top: 1px solid rgba($primary, .5);
     background-color: $footer-background;
     color: $footer-color;

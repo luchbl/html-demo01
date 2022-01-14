@@ -32,6 +32,11 @@ Flickity.prototype.resize = function () {
         groupCells: '100%',
         pageDots: false,
     });
+    $('.carousel-feedback').flickity({
+        pageDots: false,
+        adaptiveHeight: true,
+    });
+
     // products detail
     if ($('.carousel-nav').length || $('.carousel-main').length) {
         var $carousel = $('.carousel-main').flickity();

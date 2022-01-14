@@ -43,8 +43,13 @@ block mainer
 						.text-single !{'<span class="text-success">Còn hàng</span>'}
 						.block-price.mt-2
 							.price
-								span.price-sale 799,000!{'<u>đ</u>'}
 								del.price-origin 999,000!{'<u>đ</u>'}
+								span.price-sale 799,000!{'<u>đ</u>'}
+								span.saleoff
+									svg.start(viewBox="0 0 4 16"): path(d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3", fill="#f69113")
+									span.text 20% off 
+									svg.end(viewBox="0 0 4 16"): path(d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3", transform="rotate(180) translate(-3 -15)", fill="#f69113")
+
 						.block-desc.mt-3
 							| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Standard dummy text ever since the 1500s.
 						.button-grid-half.mt-3
