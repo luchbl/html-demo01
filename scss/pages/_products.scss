@@ -23,11 +23,11 @@
         display: inline-block;
         vertical-align: top;
         margin: 0 7px;
-        padding: 0 1px 1px 0;
+        padding: 0 4px 1px;
         white-space: nowrap;
         svg {
             @include absolute(0,null,0);
-            height: calc(100% + 1px);
+            height: 100%;
             &.start {
                 right: 100%;
             }
