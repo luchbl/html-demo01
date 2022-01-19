@@ -209,6 +209,7 @@
 		vertical-align: top;
 		font-size: var(--font-size-cate, 15px);
 		font-weight: 500;
+		text-transform: capitalize;
 		.d-flex {
 			padding: 4px 14px 4px 8px;
 			border: 1px solid rgba($primary,.15);
@@ -252,6 +253,7 @@
     	@extend %flex-center;
     	transition: background 0.3s ease;
     	background: rgba(#000,.2);
+    	letter-spacing: -.25px;
     }
     .img-bg {
     	width: 100%;
@@ -336,7 +338,7 @@
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
         
-        --font-size-cate: 1rem;
+        --font-size-cate: 1.0625rem;
         
 		&-item {
 			display: block;
@@ -383,6 +385,6 @@
 	}
 	.slide-box {
 		--img-height: 115px;
-		--padding-box: 1.5rem;
+		--padding-box: 1rem;
 	}
 }
