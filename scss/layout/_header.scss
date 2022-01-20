@@ -27,9 +27,9 @@
 	--logo-width: 100px;
     width: var(--logo-width);
     flex: 0 0 auto;
-    height: calc(76 / 240 * 100%);
+    height: calc(138 / 401 * 100%);
     position: relative;
-    margin: .75rem 0;
+    margin: .5rem 0;
 
     img {
     	max-height: 100%;
@@ -182,8 +182,7 @@
 		}
 	}
 	.logo {
-		--logo-width: 120px;
-		margin: 1rem 0;
+		--logo-width: 125px;
 	}
 	.header-right {
 		--margin-item: 24px;
@@ -204,7 +203,7 @@
 }
 @include media-breakpoint-up(lg) {
 	.logo {
-		--logo-width: 120px;
+		--logo-width: 160px;
 	}
 	.header-right {
 		--margin-item: 32px;
@@ -215,7 +214,8 @@
 }
 @include media-breakpoint-up(xl) {
 	.logo {
-		--logo-width: 160px;
+		--logo-width: 180px;
+		margin: .675rem 0;
 	}
 	.header {
 		--header-container: #{map-get($container-max-widths, "xl")};

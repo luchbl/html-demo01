@@ -22,7 +22,6 @@
         font-size: 13px;
         font-weight: 500;
         display: inline-block;
-<<<<<<< HEAD
         vertical-align: 3px;
         font-weight: 400;
         line-height: 18px;
@@ -48,21 +47,6 @@
             background-position: left center;
             left: 100%;
             margin-left: -1px;
-=======
-        vertical-align: top;
-        margin: 0 7px;
-        padding: 0 4px 1px;
-        white-space: nowrap;
-        svg {
-            @include absolute(0,null,0);
-            height: 100%;
-            &.start {
-                right: 100%;
-            }
-            &.end {
-                left: 100%;
-            }
->>>>>>> 5d8d0d2eaeee9518d4e9ca737b9bd79b4887dc5c
         }
     }
 }

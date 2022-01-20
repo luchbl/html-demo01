@@ -369,9 +369,18 @@
 }
 @include media-breakpoint-up(xl) {
 	.grid-layout {
+		background: transparent;
+		&-left,
+		&-right {
+			background: #fff;
+			padding: 0 1rem;
+		}
 		&-left {
 			width: 270px;
 		}
+	}
+	.cate-outer {
+		padding-left: 1.0625rem;
 	}
 	.slide-box {
 		--img-height: 100px;
