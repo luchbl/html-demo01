@@ -48,6 +48,13 @@ block mainer
 								span.saleoff 15% giảm
 						.block-desc.mt-3
 							| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Standard dummy text ever since the 1500s.
+						.block-size.mt-3.d-flex.align-items-center
+							.fw-bold.mr-3 Số lượng
+							.form-quantity
+								input.form-control(type="text", value="1")
+								a.control-down.fa.fa-minus(role="button")
+								a.control-up.fa.fa-plus(role="button")
+
 						.button-grid-half.mt-3
 							button.btn.btn-primary Thêm vào giỏ
 							+a('cart.html', 'btn btn-danger', 'Đặt hàng')

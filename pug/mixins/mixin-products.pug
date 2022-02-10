@@ -1,8 +1,13 @@
 //- mixin products
-mixin pro-item(img, tt)
+mixin pro-item(img, tt, soldout)
     .block 
         +a('product-detail.html', 'absolute',)
-        .thumb-res.tall: +img('products/'+img)(class="fit-cover")
+        if soldout 
+            .thumb-res.tall 
+                .ribbon: span.soldout Hết Hàng
+                +img('products/'+img)(class="fit-cover")
+        else
+            .thumb-res.tall: +img('products/'+img)(class="fit-cover")
         .info 
             .tt=tt
             .price 
