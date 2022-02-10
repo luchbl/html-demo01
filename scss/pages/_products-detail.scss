@@ -25,18 +25,6 @@
 		}
 	}
 }
-.static-banner {
-	@include absolute(0,0,0,0);
-	margin: auto;
-	max-width: 140px;
-	height: 70px;
-	text-align: center;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: rgba(#000,.7);
-	color: #fff;
-}
 .carousel-nav-wrap {
 	position: relative;
 	width: 50px;
@@ -120,6 +108,12 @@
     overflow: hidden;
     &.textover {
         max-height: 500px;
+		~ .text-center .btn-toggle-content {
+			display: inline-block;
+		}
+		.gradient {
+			display: block;
+		}
         &.active {
             max-height: 100%;
             padding-bottom: 1rem;
@@ -129,6 +123,7 @@
         }
     }
     .gradient {
+		display: none;
     	@include absolute(null,0,0,0);
     	height: 150px;
     	background: linear-gradient(to top, #fff 5px, rgba(#fff,0));
@@ -142,6 +137,7 @@
 	padding: .375rem 2rem;
 	border-radius: 5px;
 	position: relative;
+	display: none;
 	&:before {
 		content: attr(data-fs);
 		margin-right: .5rem;
